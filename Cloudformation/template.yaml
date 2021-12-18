@@ -17,14 +17,14 @@ Resources:
       - S3BucketPolicy
     Properties:
       Rule:
-        Name: ReceiptRule1
+        Name: check
         Enabled: true
         Recipients:
           - !Ref Domain
         Actions:
           - S3Action:
               BucketName: !Ref S3Bucket
-      RuleSetName: ReceiptRuleSet1
+      RuleSetName: test
   SESRuleSet:
     Type: 'AWS::SES::ReceiptRuleSet'
     Properties:
